@@ -3,7 +3,7 @@
 
 include(configure.cmake)
 
-vpm_depend(crunch_test)
+vpm_depend(crunch.test)
 
 vpm_add_library(crunch_containers_lib
   include/crunch/containers/exception.hpp
