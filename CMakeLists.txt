@@ -3,8 +3,6 @@
 
 include(configure.cmake)
 
-vpm_depend(crunch.test)
-
 vpm_add_library(crunch_containers_lib
   include/crunch/containers/exception.hpp
   include/crunch/containers/fixed_vector.hpp
@@ -12,14 +10,18 @@ vpm_add_library(crunch_containers_lib
   include/crunch/containers/utility.hpp
   include/crunch/containers/detail/fixed_vector_base.hpp
   source/exception.cpp)
-  
-add_executable(crunch_containers_test
-  test/fixed_vector_tests.cpp
-  test/small_vector_tests.cpp
-  test/tracker.cpp test/tracker.hpp)
 
-target_link_libraries(crunch_containers_test
-  crunch_containers_lib
-  crunch_test_lib)
+if(NOT CRUNCH_NO_TESTS)
+  vpm_depend(crunch.test)
+
+  add_executable(crunch_containers_test
+    test/fixed_vector_tests.cpp
+    test/small_vector_tests.cpp
+    test/tracker.cpp test/tracker.hpp)
+
+  target_link_libraries(crunch_containers_test
+    crunch_containers_lib
+    crunch_test_lib)
     
-crunch_add_test(crunch_containers_test)
+  crunch_add_test(crunch_containers_test)
+endif()
