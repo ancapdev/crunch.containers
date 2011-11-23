@@ -4,8 +4,7 @@
 #ifndef CRUNCH_CONTAINERS_DETAIL_FIXED_VECTOR_BASE_HPP
 #define CRUNCH_CONTAINERS_DETAIL_FIXED_VECTOR_BASE_HPP
 
-#include "crunch/base/stdint.hpp"
-
+#include <cstdint>
 #include <cstddef>
 #include <type_traits>
 
