@@ -12,6 +12,7 @@ vpm_add_library(crunch_containers_lib
   source/exception.cpp)
 
 if(NOT CRUNCH_NO_TESTS)
+  vpm_set_default_version(crunch.test trunk)
   vpm_depend(crunch.test)
 
   add_executable(crunch_containers_test
