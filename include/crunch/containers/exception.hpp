@@ -5,14 +5,15 @@
 #define CRUNCH_CONTAINERS_EXCEPTION_HPP
 
 #include "crunch/base/noreturn.hpp"
+#include "crunch/containers/api.hpp"
 
 namespace Crunch { namespace Containers {
 
-CRUNCH_NORETURN void ThrowInvalidArgument(char const* message);
-CRUNCH_NORETURN void ThrowLengthError(char const* message);
-CRUNCH_NORETURN void ThrowOutOfRange(char const* message);
-CRUNCH_NORETURN void ThrowOverflowError(char const* message);
-CRUNCH_NORETURN void ThrowRuntimeError(char const* message);
+CRUNCH_CONTAINERS_API CRUNCH_NORETURN void ThrowInvalidArgument(char const* message);
+CRUNCH_CONTAINERS_API CRUNCH_NORETURN void ThrowLengthError(char const* message);
+CRUNCH_CONTAINERS_API CRUNCH_NORETURN void ThrowOutOfRange(char const* message);
+CRUNCH_CONTAINERS_API CRUNCH_NORETURN void ThrowOverflowError(char const* message);
+CRUNCH_CONTAINERS_API CRUNCH_NORETURN void ThrowRuntimeError(char const* message);
 
 }}
 

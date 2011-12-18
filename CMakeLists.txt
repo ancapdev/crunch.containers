@@ -4,6 +4,7 @@
 include(configure.cmake)
 
 vpm_add_library(crunch_containers_lib
+  include/crunch/containers/api.hpp
   include/crunch/containers/exception.hpp
   include/crunch/containers/fixed_vector.hpp
   include/crunch/containers/small_vector.hpp
