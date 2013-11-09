@@ -1,4 +1,4 @@
-# Copyright (c) 2011, Christian Rorvik
+# Copyright (c) 2011-2013, Christian Rorvik
 # Distributed under the Simplified BSD License (See accompanying file LICENSE.txt)
 
 include(configure.cmake)
@@ -13,7 +13,7 @@ vpm_add_library(crunch_containers_lib
   source/exception.cpp)
 
 if(NOT CRUNCH_NO_TESTS)
-  vpm_set_default_version(crunch.test trunk)
+  vpm_set_default_version(crunch.test master)
   vpm_depend(crunch.test)
 
   add_executable(crunch_containers_test
